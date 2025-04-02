@@ -1,0 +1,345 @@
+/* Global styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    /*background: url('electronics-background.jpg') no-repeat center center fixed;*/
+    background: url('./Images/ece_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #222;
+}
+
+header {
+    background-color: #f1f1f1; 
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 2px 2px rgba(0, 72, 255, 0.155);
+    
+} 
+
+header h2 {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+.hamburger {
+    display: none; /* Hide by default */
+    font-size: 2em; /* Size of the hamburger icon */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    position: absolute; /* Position it in the header */
+    right: 20px; /* Align to the right */
+    top: 20px; /* Align to the top */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    
+    
+}
+
+nav a {
+    color: #001f3f;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    
+}
+
+nav a:hover {
+    color: #ff6f61;
+}
+.heading{
+    color:white;
+    text-align: center;
+    font-size:3em;
+    margin:20px 0 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.temp{
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    width: 70%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.main-content {
+    margin-top: 40px; /* Add space between header and content */
+}
+
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    /* opacity: 0;
+    transition: opacity 1s ease-in-out; */
+}
+.events-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    gap: 20px; /* Space between cards */
+}
+
+.content-section.visible {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+.aadd p {
+    text-align: justify;
+    width: 100%;
+}
+/* Upcoming events */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center; /* Center-align text */
+    border: 1px solid #001f3f; /* Add border to cells */
+  }
+  
+  th {
+    background-color: #001f3f;
+    color: white;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Past events */
+.card{
+    border-radius: 25px;
+    position: relative;
+    padding:25px;
+    background-color:rgba(219, 227, 247, 0.549);
+    margin:0 150px 0 250px;
+    height:300px;
+    box-shadow: 0 2px 5px rgba(128, 197, 211, 0.822);
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+    max-width: 1000px;
+    text-align: center;
+}
+.card img{
+    margin:30px 20px 0 0;
+}
+.circle-img{
+    border-radius:50%;
+    border:7px solid #fff;
+    width:250px;
+    height:250px;
+    float: right;
+    position:absolute;
+    right: 0;
+    top: 35%;
+    transform: translateY(-50%);
+    
+}
+.top{
+    border-radius:25px 25px 0 0;
+    height: 120px;
+    width:100%;
+    background-color:rgba(129, 164, 252, 0.812);
+    position:absolute;
+    top:0;
+    left:0;
+    text-align: center;
+}
+.title {
+    display: block; /* Ensures it takes full width */
+    margin-bottom: 0.5px; /* Adjust spacing */
+}
+
+.date {
+    display: block; /* Moves date to the next line */
+    font-size: 1.5rem; /* Adjust the size as needed */
+    margin-top: 0px;
+   
+}
+.bottom {
+    margin-top: 100px;
+    max-width: 65%; /* Ensures text doesn’t go under the image */
+    margin-right: 25%; /* Moves it away from the right */
+    text-align: left; /* Keeps text aligned properly */
+    line-height: 1.5;
+}
+.info{
+    margin: 20px 0;
+    color: #222;
+}
+
+/* Footer styling */
+footer {
+    background-color: #001f3f;
+    color: white;
+    padding: 20px 0;
+    font-size: 1em;
+    position: absolute;
+    text-align: center;
+    /* bottom: 0px; */
+    width:100%;
+    
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin: 10px 0;
+}
+
+.footer-contact a {
+    display: inline-block;
+}
+
+.footer-contact img {
+    width: 50px; /* Adjust size for mobile */
+    height: auto;
+    transition: fill 0.3s ease; /* Add transition for color change */
+    filter: invert(1); /* This will make the image white */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: 2em; /* Smaller font size for large screens */
+    }
+
+    .heading {
+        font-size: 2.5em; /* Adjust heading size */
+    }
+
+    .temp {
+        width: 90%; /* Make temp container wider on smaller screens */
+    }
+
+    .card {
+        width: 90%; /* Make cards take more width on smaller screens */
+        margin: 20px 0px; /* Center cards */
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    nav {
+        display: none; /* Hide nav by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        right: 0;
+        background-color: #f1f1f1; /* Background color for dropdown */
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+
+    nav.open {
+        display: flex; /* Show nav when open */
+    }
+
+    nav a {
+        padding: 10px; /* Add padding for links */
+        text-align: center; /* Center align text */
+        border-bottom: 1px solid #ccc; /* Optional: add a border between links */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Further reduce font size */
+    }
+
+    .heading {
+        font-size: 2em; /* Adjust heading size */
+    }
+
+    .card {
+        height: auto; /* Allow cards to adjust height */
+    }
+
+    .circle-img {
+        width: 100px; /* Smaller image on mobile */
+        height: 100px;
+        top:25%;
+    }
+
+    .bottom {
+        margin-top: 80px; /* Adjust margin for mobile */
+        max-width: 60%; /* Full width on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em; /* Further reduce font size */
+    }
+
+    .heading {
+        font-size: 1.5em; /* Adjust heading size */
+    }
+
+    .temp {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .footer-contact {
+        flex-direction: column; /* Stack footer links vertically */
+        gap: 5px; /* Reduce gap */
+    }
+
+    .footer-contact img {
+        width: 40px; /* Smaller icons in footer */
+    }
+    .circle-img {
+        width: 40px; /* Smaller image on mobile */
+        height: 100px;
+        top:15%;
+        border:2px solid #fff;
+    }
+    .top{
+        text-align: justify;
+        height:auto;
+    }
+    .card {
+        width: 80%; /* Make cards take more width on smaller screens */
+        margin: 20px 10px; /* Center cards */
+    }
+    .title {
+        display: block; /* Ensures it takes full width */
+        margin-bottom: 0.5px; /* Adjust spacing */
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    
+    .date {
+        display: block; /* Moves date to the next line */
+        font-size: 1.0rem; /* Adjust the size as needed */
+        margin-top: 0px;
+        text-align: center;
+       
+    }
+}
